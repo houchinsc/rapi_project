@@ -20,7 +20,7 @@ import sys
 
 import time
 import datetime
-import random 
+import random
 import SDL_Pi_SunControl
 
 # Main Program
@@ -55,9 +55,9 @@ critical = SDL_Pi_SunControl.SDL_Pi_SunControl(INA3221Address=INA3221Address, US
 variable = SDL_Pi_SunControl.SDL_Pi_SunControl(INA3221Address=INA3221Address, USBControlEnable=variable_enable, USBControlControl=variable_control, WatchDog_Done=Pin_WatchDog_Done, WatchDog_Wake=Pin_WatchDog_Wake)
 
 while True:
-	
+
 	print "------------------------------"
-	print "SunControl Voltages and Currents"
+	print "SunControl Voltages and Currents - New"
   	print "------------------------------"
 
 	# set Label
@@ -72,16 +72,16 @@ while True:
 
   	#print "%s Load Voltage :\t  %3.2f V" % (myLabel, sunControl.readChannelVoltageV(SDL_Pi_SunControl.SunControl_SOLAR_CELL_CHANNEL))
   	#print "%s Current :\t\t  %3.2f mA" % (myLabel, sunControl.readChannelCurrentmA(SDL_Pi_SunControl.SunControl_SOLAR_CELL_CHANNEL))
-  	#print 
+  	#print
 
-        
+
 	# set Label
 	#myLabel = "Output"
-  
+
   	#print "%s Load Voltage :\t\t  %3.2f V" % (myLabel, sunControl.readChannelVoltageV(SDL_Pi_SunControl.SunControl_OUTPUT_CHANNEL))
   	#print "%s Current :\t\t  %3.2f mA" % (myLabel, sunControl.readChannelCurrentmA(SDL_Pi_SunControl.SunControl_OUTPUT_CHANNEL))
   	#print
-		
+
 
 	#
 	time.sleep(2.0)
@@ -90,10 +90,10 @@ while True:
 	critical.setUSBControl(True)
 	critical.setUSBEnable(True)
 	critical.setUSBControl(False)
-	
+
 	variable.setUSBControl(True)
 	variable.setUSBEnable(True)
-	variable.setUSBControl(False)	
+	variable.setUSBControl(False)
 
 	print "------"
 	print "USB Power turned OFF"
@@ -118,12 +118,12 @@ while True:
 
   	#print "%s Load Voltage :\t  %3.2f V" % (myLabel, sunControl.readChannelVoltageV(SDL_Pi_SunControl.SunControl_SOLAR_CELL_CHANNEL))
   	#print "%s Current :\t\t  %3.2f mA" % (myLabel, sunControl.readChannelCurrentmA(SDL_Pi_SunControl.SunControl_SOLAR_CELL_CHANNEL))
-  	#print 
+  	#print
 
-        
+
 	# set Label
 	myLabel = "Output"
-  
+
   	#print "%s Load Voltage :\t\t  %3.2f V" % (myLabel, sunControl.readChannelVoltageV(SDL_Pi_SunControl.SunControl_OUTPUT_CHANNEL))
   	#print "%s Current :\t\t  %3.2f mA" % (myLabel, sunControl.readChannelCurrentmA(SDL_Pi_SunControl.SunControl_OUTPUT_CHANNEL))
 
